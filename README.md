@@ -165,9 +165,4 @@ Visit: [http://localhost:3000/api-docs](http://localhost:3000/api-docs)
 * [ ] Real-time collaboration (WebSocket)
 * [ ] Role-based access control
 
----
-
-## 📃 License
-
-MIT License
 ```
