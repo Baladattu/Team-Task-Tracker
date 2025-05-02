@@ -37,7 +37,7 @@ router.get('/github', passport.authenticate('github', { scope: ['user:email'] })
 router.get('/github/callback',
     passport.authenticate('github', {
         failureRedirect: '/login',
-        successRedirect: '/dashboard', // or redirect to dashboard
+        successRedirect: 'http://127.0.0.1:5500/client/pages/dashboard.html', // or redirect to dashboard
     })
 );
 
@@ -69,7 +69,7 @@ router.get('/google', passport.authenticate('google', { scope: ['profile', 'emai
 
 router.get('/google/callback',
     passport.authenticate('google', {
-        failureRedirect: '/login',
+        failureRedirect: '/',
         successRedirect: 'http://localhost:5173/dashboard',
     })
 );

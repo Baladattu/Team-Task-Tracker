@@ -31,5 +31,6 @@ const Task = sequelize.define('Task', {
 Task.belongsTo(Project, { foreignKey: 'project_id', onDelete: 'CASCADE' });
 Task.belongsTo(User, { foreignKey: 'assigned_to', onDelete: 'CASCADE' });
 Task.belongsTo(Task, { as: 'ParentTask', foreignKey: 'parent_task_id', onDelete: 'CASCADE' });
+Task.hasMany(Task, { as: 'SubTasks', foreignKey: 'parent_task_id', onDelete: 'CASCADE' });
 
 module.exports = Task;

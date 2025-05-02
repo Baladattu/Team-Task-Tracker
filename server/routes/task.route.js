@@ -1,7 +1,7 @@
 const express = require('express');
 const taskRouter = express.Router();
 const ensureAuth = require('../middlewares/auth.middleware');
-const { getAllTasks, createTask, getTaskById, updateTask, deleteTask } = require('../controllers/tasks.controller');
+const { getAllTasks, createTask, getTaskById, updateTask, deleteTask, getTaskByProjectId } = require('../controllers/tasks.controller');
 
 /**
  * @swagger
@@ -136,5 +136,7 @@ taskRouter.put('/:id', ensureAuth, updateTask);
  *         description: Task not found
  */
 taskRouter.delete('/:id', ensureAuth, deleteTask);
+
+taskRouter.get('/project/:id', ensureAuth, getTaskByProjectId);
 
 module.exports = taskRouter;
