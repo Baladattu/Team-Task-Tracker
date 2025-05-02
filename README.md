@@ -1,4 +1,3 @@
-```markdown
 # 🧑‍💼 Team Task Tracker
 
 A full-stack task management web application for teams. Features include OAuth login via GitHub/Google, project/task management, comments, file uploads via Zata (S3-compatible), and a clean, modular frontend using HTML, TailwindCSS, and JavaScript.
